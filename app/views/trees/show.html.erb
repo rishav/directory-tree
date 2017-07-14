@@ -1,0 +1,8 @@
+<h1>Tree#show</h1>
+<div>
+  <h4><%= @tree.name %></h4>
+  <b> Tree Structure </b><br/> <br/>
+  <% @tree.top_level_nodes.each do |node| %>
+    <%= render partial: 'nodes/details', locals: {node: node} %>
+  <% end %>  
+</div>

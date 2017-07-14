@@ -1,0 +1,13 @@
+<h1>Tree#index</h1>
+
+<div>
+  <ul>
+    <% @trees.each do |tree| %>
+      <li><%= tree.id %> <%= link_to tree.name, tree_url(tree) %> <%= link_to "Edit", edit_tree_url(tree) %> </li>
+    <% end %>
+  </ul>
+</div>
+
+<div>
+  <%= render partial: 'form' %>
+</div>

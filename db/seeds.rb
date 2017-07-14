@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
+tree = Tree.create(name: 'First Tree')
 ['A', 'B', 'C'].each do |name|
-  Node.create(name: name)
+  Node.create(name: name, tree: tree)
 end

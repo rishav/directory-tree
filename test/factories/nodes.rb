@@ -4,5 +4,6 @@ FactoryGirl.define do
        "MyNode-#{n}"
      end
     parent_id nil
+    tree
   end
 end

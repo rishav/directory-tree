@@ -1,5 +1,7 @@
 FactoryGirl.define do
   factory :tree do
-    name "MyString"
+    sequence :name do |n|
+      "TreeName-#{n}"
+    end
   end
 end
