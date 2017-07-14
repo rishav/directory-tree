@@ -10,14 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170714051627) do
+ActiveRecord::Schema.define(version: 20170714054747) do
 
   create_table "nodes", force: :cascade do |t|
     t.string "name"
     t.integer "parent_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "tree_id"
     t.index ["parent_id"], name: "index_nodes_on_parent_id"
+    t.index ["tree_id"], name: "index_nodes_on_tree_id"
+  end
+
+  create_table "trees", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
