@@ -2,7 +2,11 @@
 <div>
   <h4><%= @tree.name %></h4>
   <b> Tree Structure </b><br/> <br/>
-  <% @tree.top_level_nodes.each do |node| %>
-    <%= render partial: 'nodes/details', locals: {node: node} %>
-  <% end %>  
+  <div class="tree">
+    <% @tree.top_level_nodes.each do |node| %>
+      <%= render partial: 'nodes/details', locals: {node: node} %>
+    <% end %>
+    <%= render partial: 'nodes/form', locals: {node: Node.new, tree: @tree, parent: nil} %>
+  </div>
+
 </div>
